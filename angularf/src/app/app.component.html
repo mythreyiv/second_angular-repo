@@ -1,0 +1,54 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<!--h1>lowecase Pipe</h1>
+<b>{{title | uppercase }}</b><br>
+<b>{{title | lowercase }}</b>
+
+<h1>Currency pipe</h1>
+<b>{{6589.23 | currency:"INR":false}}</b><br>
+<b>{{6589.23 | currency:"INR":true}}</b>
+
+<h1>Date pipe</h1>
+<b>{{todaydate |date:'d/M/y'}}</b><br>
+<b>{{todaydate |date:'shortTime'}}</b>
+
+<h1>Decimal pipe</h1>
+<b>{{454.7878414 | number:'3.1-1'}}</b><br>
+<b>{{ 454.7878414 |number:'3.2-2'}}</b>
+
+<h1>json pipe</h1>
+<b>{{jsonval | json}}</b><br>
+
+
+<h1>percent pipe</h1>
+<b>{{00.7878414 | percent}}</b><br>
+
+
+<h1>slice pipe</h1>
+<b>{{months | slice:2:6}}</b><br>
+
+<h1>Custom pipe</h1>
+<b>Floor value of 25.9 is {{25.9|flr}}</b><br/>
+<b>the reverse of username is {{username |reve}}</b>
+ROUTER
+    <a routerLink="home">Home</a>&nbsp;
+    <a routerLink="blog">Blog</a>&nbsp;
+    <a routerLink="about">About</a-->
+
+        <!--a routerLink="employee">employee</a-->
+        <!--a routerLink="productlist">productlist</a>
+        <app-signup></app-signup-->
+            <!--app-employee></app-employee-->    
+           <!--app-employee></app-employee-->
+           <!--a routerLink="contact">Contact us</a-->
+           <app-root></app-root>
+<router-outlet></router-outlet>

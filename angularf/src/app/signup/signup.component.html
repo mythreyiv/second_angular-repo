@@ -1,0 +1,77 @@
+<!--form #signupform="ngForm">
+    <fieldset>
+        <div>
+            SignUp
+        </div>
+   
+    <div>
+    <label for="email">Email</label>
+    <input type="text" required id="email" [(ngModel)]="user.email" placeholder="email">
+</div>
+
+<div ngModelGroup="password">
+    <div>
+    <label for="pwd">password</label>
+    <input type="password" id="pwd" required [(ngModel)]="user.password.pwd" placeholder="password">
+</div>
+
+<div>
+    <label for="conpwd">confirm password</label>
+    <input type="password" id="conpwd" required [(ngModel)]="user.password.conpwd" placeholder="confirm password">
+</div>
+
+<div class="form-group">
+    <label for="select">gender</label>
+    <select id="select" required [(ngModel)]="user.gender" >
+        <option *ngFor= "let g of gender" [value]="g">{{g}}</option>
+    </select>
+</div>
+
+<div>
+   
+    <input type="checkbox" id="conpwd" required [(ngModel)]="user.terms">Please accept the terms and conditions
+</div>
+
+<div>
+    <button type="reset" btn btn-warning>Cancel</button>&nbsp;
+    <input type="submit" [disabled]="!signupform.valid" >Submit
+</div>
+</div>
+</fieldset>
+</form-->
+
+<form #signupform="ngForm">
+<fieldset>
+    <legend><h1>SIGN UP</h1></legend>
+ <div class="form-group">
+           <label for="inputmail">Email ID</label>
+           <input type="text" required [(ngModel)]="user.email" id="inputmail" name="Email" placeholder="Email">
+    </div>
+    <div ngModelGroup="password">
+     <div>
+        <label for="inputpassword">Password</label>
+        <input type="password" required [(ngModel)]="user.password.pwd" id="inputpassword" name="psw" placeholder="Password">
+     </div>
+     <div class="form-group">
+        <label for="confirmpassword">Confirm password</label>
+        <input type="password" required [(ngModel)]="user.password.conpwd" id="confirmpassword" name="cnfpsw" placeholder="Confirm password">
+     </div>
+     <div>
+         <label for="select">Gender</label>
+         <select id="select" required required [(ngModel)]="user.gender" name="gender">
+         <option *ngFor="let g of gender" [value]="g">{{g}}
+         </option>
+        </select>
+     </div>
+     <div class="form-group checkbox">
+        <label><input type="checkbox" [(ngModel)]="user.terms"  name="tc">Agree to the terms and conditions!
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="reset">RESET</button>
+        <button type="submit" [disabled]="!signupform.valid">SUBMIT</button>
+     </div>
+</div>
+
+</fieldset>
+</form>
